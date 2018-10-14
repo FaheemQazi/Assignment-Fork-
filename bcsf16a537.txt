@@ -1,0 +1,213 @@
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<unistd.h>
+#include<sys/types.h>
+#include<sys/wait.h>
+int main ()
+{
+  int array[1000];
+  int pp1[2], pp2[2], pp3[2], pp4[2], pp5[2], pp6[2], pp7[2], pp8[2], pp9[2], pp10[2];
+  pipe (pp1);
+  pipe (pp2);
+  pipe (pp3);
+  pipe (pp4);
+  pipe (pp5);
+  pipe (pp6);
+  pipe (pp7);
+  pipe (pp8);
+  pipe (pp9);
+  pipe (pp10);
+  int sum = 0;
+
+  for (int i = 0; i < 1000; i++)
+    {
+      array[i] = i+1;
+    }
+  
+  int pid1 = fork ();
+  if (pid1 == 0)
+    {
+      for (int i = 0; i < 100; i++)
+	{
+	  sum = sum + array[i];
+	}
+      write (pp1[1], &sum, sizeof (sum));
+      close (pp1[1]);
+       return 0;
+    }
+  else
+    {
+      int pid2 = fork ();
+      if (pid2 == 0)
+	{
+	  for (int i = 100; i < 200; i++)
+	    {
+	      sum = sum + array[i];
+	    }
+	  write (pp2[1], &sum, sizeof (sum));
+	  close (pp2[1]);
+	return 0;   
+	}
+      else
+	{
+	  int pid3 = fork ();
+	  if (pid3 == 0)
+	    {
+	      for (int i = 200; i < 300; i++)
+		{
+		  sum = sum + array[i];
+		}
+	      write (pp3[1], &sum, sizeof (sum));
+	      close (pp3[1]);
+		return 0;       
+	    }
+	  else
+	    {
+	      int pid4 = fork ();
+	      if (pid4 == 0)
+		{
+		  for (int i = 300; i < 400; i++)
+		    {
+		      sum = sum + array[i];
+		    }
+		  write (pp4[1], &sum, sizeof (sum));
+		  close (pp4[1]);
+		 return 0;  
+     		}
+	      else
+		{
+		  int pid5 = fork ();
+		  if (pid5 == 0)
+		    {
+		      for (int i = 400; i < 500; i++)
+			{
+			  sum = sum + array[i];
+			}
+		      write (pp5[1], &sum, sizeof (sum));
+		      close (pp5[1]);
+		return 0;       
+		    }
+		  else
+		    {
+		      int pid6 = fork ();
+		      if (pid6 == 0)
+			{
+			  for (int i = 500; i < 600; i++)
+			    {
+			      sum = sum + array[i];
+			    }
+			  write (pp6[1], &sum, sizeof (sum));
+			  close (pp6[1]);
+		   	  return 0;	   
+			}
+		      else
+			{
+			  int pid7 = fork ();
+			  if (pid7 == 0)
+			    {
+			      for (int i = 600; i < 700; i++)
+				{
+				  sum = sum + array[i];
+				}
+			      write (pp7[1], &sum, sizeof (sum));
+			      close (pp7[1]);
+			      return 0;       
+			    }
+			  else
+			    {
+			      int pid8 = fork ();
+			      if (pid8 == 0)
+				{
+				  for (int i = 700; i < 800; i++)
+				    {
+				      sum = sum + array[i];
+				    }
+				  write (pp8[1], &sum, sizeof (sum));
+				  close (pp8[1]);
+				  return 0;				
+ 			        }
+			      else
+				{
+				  int pid9 = fork ();
+				  if (pid9 == 0)
+				    {
+				      for (int i = 800; i < 900; i++)
+					{
+					  sum = sum + array[i];
+					}
+				      write (pp9[1], &sum, sizeof (sum));
+				      close (pp9[1]);
+				      return 0;
+				    }
+				  else
+				    {
+				      int pid10 = fork ();
+				      if (pid10 == 0)
+					{
+					  for (int i = 900; i < 1000; i++)
+					    {
+					      sum = sum + array[i];
+					    }
+					  write (pp10[1], &sum, sizeof (sum));
+					  close (pp10[1]);
+					  return 0;				  
+					}
+				    }
+				}
+			    }
+			}
+		    }
+		}
+	    }
+	}
+    }
+
+
+  int result = 0, fresult = 0;
+  read (pp1[0], &result, sizeof (result));
+  close (pp1[0]);
+
+  fresult = fresult + result;
+  read (pp2[0], &result, sizeof (result));
+  close (pp2[0]);
+
+  fresult = fresult + result;
+  read (pp3[0], &result, sizeof (result));
+  close (pp3[0]);
+
+  fresult = fresult + result;
+  read (pp4[0], &result, sizeof (result));
+  close (pp4[0]);
+
+  fresult = fresult + result;
+  read (pp5[0], &result, sizeof (result));
+  close (pp5[0]);
+
+  fresult = fresult + result;
+  read (pp6[0], &result, sizeof (result));
+  close (pp6[0]);
+
+  fresult = fresult + result;
+  read (pp7[0], &result, sizeof (result));
+  close (pp7[0]);
+
+  fresult = fresult + result;
+  read (pp8[0], &result, sizeof (result));
+  close (pp8[0]);
+
+  fresult = fresult + result;
+  read (pp9[0], &result, sizeof (result));
+  close (pp9[0]);
+
+  fresult = fresult + result;
+  read (pp10[0], &result, sizeof (result));
+  close (pp10[0]);
+
+  fresult = fresult + result;
+
+  printf ("%d ", fresult);
+
+  return 0; 
+}
