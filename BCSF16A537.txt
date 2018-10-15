@@ -1,0 +1,156 @@
+    1  grep -v 'os'  /etc/passwd
+    2  cat /user/passwd
+    3  cat /etc/passwd
+    4  clear
+    5  exec ls
+    6  ps
+    7  ps -all
+    8  firefox &
+    9  grep -i 'OS' /etc/passwd
+   10  wc -l  /etc/passwd
+   11  firefox&
+   12  cat /etc/passwd
+   13  jobs
+   14  kill -9 
+   15  firefox&
+   16  jobs
+   17  kill -9 3294
+   18  jobs
+   19  man grep
+   20  pwd
+   21  ls
+   22  clear
+   23  cd file1
+   24  pwd
+   25  ls
+   26  cd..
+   27  cd ..
+   28  cd /
+   29  pwd
+   30  cd home
+   31  pwd
+   32  ls
+   33  pwd os
+   34  ls
+   35  cd os
+   36  pwd
+   37  ls
+   38  cd ../
+   39  ls
+   40  cd os
+   41  ls
+   42  cat file1
+   43  cd file1
+   44  cp file1 music
+   45  cd os
+   46  cd ..
+   47  pwd
+   48  ls
+   49  cd file1 music
+   50  cp file1 music
+   51  man cp
+   52  ls -l
+   53  man ls
+   54  rmdir file1
+   55  rm-r file1
+   56  head documents
+   57  clear
+   58  alias do clear
+   59  alias do=clear
+   60  do
+   61  unalias do
+   62  do
+   63  man echo
+   64  whoami
+   65  date
+   66  cal
+   67  bc
+   68  which clear
+   69  which ls
+   70  wc -l file
+   71  wc -c file
+   72  wc file
+   73  sort os
+   74  ls os
+   75  l os
+   76  ls home
+   77  ls
+   78  pwd
+   79  sort os
+   80  sort /home/os
+   81  sort bin
+   82  sort /bin
+   83  ls
+   84  cd file
+   85  ls
+   86  sort readme
+   87  sort README
+   88  wc README
+   89  grep "This" README
+   90  getit README
+   91  gedit README
+   92  cp README home
+   93  mv README file
+   94  diff file home
+   95  man diff
+   96  diff file file11
+   97  cd..
+   98  cd,,/
+   99  cd ../
+  100  pwd
+  101  cat file.txt
+  102  cd file
+  103  cat file.txt
+  104  cat file11.txt
+  105  l file11.txt
+  106  l file11
+  107  man l
+  108  less file11.txt
+  109  less file1.text
+  110  less file1
+  111  cat file
+  112  mkdir new
+  113  torch new1
+  114  touch new
+  115  man touch
+  116  nano file11
+  117  torcs new
+  118  history
+  119  ifconfig
+  120  ipconfig
+  121  uname
+  122  cd ../
+  123  uname
+  124  uname -r
+  125  uname -a
+  126  cd 
+  127  ls cd
+  128  pwd
+  129  ls os
+  130  ls home
+  131  ls
+  132  cd /file/new
+  133  cd /file
+  134  cd home
+  135  cd `
+  136  cd ~
+  137  clear
+  138  touch new22
+  139  touch test.txt
+  140  mkdir history
+  141  cd history
+  142  1>history
+  143  history
+  144  cat histor.txt
+  145  cat history.txt
+  146  nano history
+  147  wc history
+  148  1>history
+  149  wc history
+  150  cd
+  151  nano BCSF16A537
+  152  history 1>BCSf16A537
+  153  "history 1>BCSF16A537"
+  154  history
+  155  history>BCSF16A537
+
